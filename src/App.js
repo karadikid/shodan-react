@@ -16,6 +16,7 @@ class App extends Component {
       shodanArray: [],
       hereArray: []
     };
+    this.buttonPress = this.buttonPress.bind(this);
   }
 
   buttonPress() {
@@ -23,8 +24,8 @@ class App extends Component {
       .then(res => res.json())
       .then(res => {
         console.log(res)
-        // this.setState({shodanArray: res})
-        // console.log(this.state.shodanArray)
+        this.setState({shodanArray: res.matches})
+        console.log(this.state.shodanArray)
       })
   }
 
