@@ -1,4 +1,4 @@
-[![Virtual Nexus Logo](./VN_Logo.png)](http://www.virtualnex.us)
+[![Virtual Nexus Logo](./VN_Logo.svg)](http://www.virtualnex.us)
 
 # Shodan-React
 # Karadi Additions #
