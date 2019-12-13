@@ -14,7 +14,7 @@ class App extends Component {
     super();
     this.state = {
       shodanArray: [],
-      hereArray: []
+      subsetArray: [],
     };
     this.buttonPress = this.buttonPress.bind(this);
   }
@@ -26,7 +26,16 @@ class App extends Component {
         console.log(res)
         this.setState({shodanArray: res.matches})
         console.log(this.state.shodanArray)
+        this.state.createArray()
       })
+  }
+
+  createArray() {
+    let i = 0;
+    for (i=0; i<10; i++) {
+      this.state.shodanArray.push(this.state.subsetArray)
+      console.log(this.state.subsetArray)
+    }
   }
 
   render() {
