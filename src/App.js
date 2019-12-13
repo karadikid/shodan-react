@@ -32,15 +32,16 @@ class App extends Component {
         console.log(res)
         this.setState({shodanArray: res.matches})
         console.log(this.state.shodanArray)
-        this.setState({shodanSubset: [res.matches]})
+        this.setState({shodanArray: res.matches})
+        this.createArray();
       })
   }
 
   createArray() {
     let i = 0;
     for (i=0; i<10; i++) {
-      this.state.shodanArray.push(this.state.subsetArray)
       console.log(this.state.subsetArray)
+      this.state.subsetArray.push(this.state.shodanArray[i])
     }
   }
 
@@ -75,7 +76,9 @@ class App extends Component {
         </header>
         <p className="App-intro"></p>
         <Button click={this.fetchResults} />
-        <View click={this.previousMap} otherClick={this.nextMap} subsetKey={this.state.subsetArray}/>
+        <View click={this.previousMap} 
+        otherClick={this.nextMap} 
+        subsetKey={this.state.subsetArray}/>
       </div>
     );
   }
