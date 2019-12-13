@@ -15,12 +15,12 @@ class View extends Component {
             <>
             <div>
                 <section>
-                <Map />
+                <Map {...this.props.subsetArray}/>
                 <button>Previous</button> 
                 <button>Next</button>
                 </section>
                 <section>
-                <Table />
+                <Table {...this.props.subsetArray}/>
                 </section>
             </div>
             </>

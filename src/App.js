@@ -21,7 +21,7 @@ class App extends Component {
       count: 0
     };
     this.fetchResults = this.fetchResults.bind(this);
-    this.previousMap = this.nextMap.bind(this);
+    this.previousMap = this.previousMap.bind(this);
     this.nextMap = this.nextMap.bind(this);
   }
 
@@ -64,8 +64,8 @@ class App extends Component {
 
   render() {
     console.log(jsonResponse)
-    //Most important lesson: Array of Objects [Key: value, key:value, key: value] or [ :value, :value, :value],
-    //.map((arg1:item, arg2:index) => { key={index} item={item}})  ALWAYS
+    let count = this.state.count;
+    let items = this.state.subsetArray[count];
 
     return (
       <div className="App">
@@ -75,7 +75,7 @@ class App extends Component {
         </header>
         <p className="App-intro"></p>
         <Button click={this.fetchResults} />
-        <View />
+        <View {...this.previousMap} {...this.nextMap} {...this.state.subsetArray}/>
       </div>
     );
   }

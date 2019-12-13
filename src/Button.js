@@ -6,7 +6,7 @@ render (){
     return(
         <div>
         <button onClick={this.props.click}>
-            Search
+            DONT PRESS YET
         </button>
         </div>
     );
