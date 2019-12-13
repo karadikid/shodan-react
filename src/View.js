@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Map from './Maps';
+import Table from './Table';
 
 class View extends Component {
-    constructor(props)
+    constructor(props){
     super(props);
     // this.state = {
-    // };
+    };
 
     //
 
@@ -13,10 +15,12 @@ class View extends Component {
             <>
             <div>
                 <section>
-                Screenshot or Map Component
+                <Map />
+                <button>Previous</button> 
+                <button>Next</button>
                 </section>
                 <section>
-                Table or Data Component
+                <Table />
                 </section>
             </div>
             </>

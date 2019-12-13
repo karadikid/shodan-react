@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 
-class Map extends Component {
+
+class Table extends Component {
     constructor(props) {
     super(props);
-    // this.state = {
-    // };
-
+    this.state = {
+    };
+}
     //
-    }
+
     render () {
         return (
             <>
             <div>
-                Map here
+                <section>
+                Table Data
+                </section>
             </div>
             </>
         );
@@ -20,5 +23,4 @@ class Map extends Component {
     }
 
 }
-
-export default Map;
+export default Table;
