@@ -9,8 +9,6 @@ import React, { Component } from 'react';
 class Table extends Component {
     constructor(props) {
     super(props);
-    this.state = {
-    };
 }
 
 getKeys(){
@@ -33,7 +31,6 @@ getRows(){
         return <tr key={index}><RenderRow key={index} data={row} keys={row}/></tr>
     })
 }
-
 
     render () {
         return (
