@@ -3,7 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import Button from "./Button";
 import View from './View'
-import Table from './Table'
 import jsonResponse  from './data.json';
 
 //Sample Query from Postman

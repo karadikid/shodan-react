@@ -20,7 +20,7 @@ getKeys(){
 }
 
 getHeaders(){
-    let keys = this.getKeys();
+    var keys = this.getKeys();
     return keys.map((key, index) => {
         return <th key={key} > {key.toUpperCase()} </th>
     })
@@ -28,10 +28,10 @@ getHeaders(){
 }
 
 getRows(){
-    let items = this.props.subsetTable;
-    let keys = this.getKeys();
+    var items = this.props.subsetTable;
+    var keys = this.getKeys();
     return items.map((row, index) => {
-        return <tr key={index}><RenderRow key={index} data={row} keys={row}/></tr>
+        return <tr key={index}><RenderRow key={index} subsetTable={row} keys={row}/></tr>
     })
 }
 
@@ -43,9 +43,7 @@ getRows(){
                     <thead>
                     <tr> { this.getHeaders()} </tr>
                     </thead>
-                    <tbody>
                     <tbody> { this.getRows() }</tbody>
-                    </tbody>
                 </table>
             </div>
             </>
@@ -53,8 +51,9 @@ getRows(){
     }
 }
     const RenderRow = (props) => {
-        return props.keys.map((key, index) => {
-        return <td key={props.subsetTable[key]}>{props.subsetTable[key]}</td>
-    })
+        console.log(props)
+    //     return props.keys.map((key, index) => {
+    //         return <td key={props.subsetTable[key]}>{props.subsetTable[key]}</td>
+    // })
 }
 export default Table;
