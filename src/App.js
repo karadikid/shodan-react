@@ -26,11 +26,11 @@ class App extends Component {
   }
 
   fetchResults() {
-        let res = jsonResponse
-        this.setState({shodanArray: res.matches})
+        this.setState(this.state.shodanArray = jsonResponse)
+        // console.log(res)
+        // this.setState({shodanArray : res})
         console.log(this.state.shodanArray)
-        this.setState({shodanArray: res.matches})
-        this.createArray();
+        this.createArray()
   }
 
   // fetchResults() {
