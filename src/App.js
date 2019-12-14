@@ -8,7 +8,7 @@ import jsonResponse  from './data.json';
 
 //Sample Query from Postman
 // https://api.shodan.io/shodan/host/search?key=6Ew4Z6p9kOwelROHLtOwn23ChCIoR0H1&query=port:1494,3389 org:"amazon web services"&facets=
-let apiKey = "8qzxm9PWXNeoWPhhIxtDm3xMt4Uzxr1m";
+let apiKey = "<INSERT API KEY>";
 let url = "https://api.shodan.io/shodan/host/search?key=";
 let value = "port:3389 80";
 
