@@ -8,9 +8,8 @@ class View extends Component {
     // this.state = {
     };
 
-    //
-
     render () {
+        let items = this.props.subsetKey[this.props.count];
         return (
             <>
             <div>

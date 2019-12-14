@@ -8,7 +8,7 @@ import jsonResponse  from './data.json';
 
 //Sample Query from Postman
 // https://api.shodan.io/shodan/host/search?key=6Ew4Z6p9kOwelROHLtOwn23ChCIoR0H1&query=port:1494,3389 org:"amazon web services"&facets=
-let apiKey = "<INSERT API KEY>";
+let apiKey = "QUZknBxrUl1MpiXDoR3OLOCEI1eX5hSv";
 let url = "https://api.shodan.io/shodan/host/search?key=";
 let value = "port:3389 80";
 
@@ -26,21 +26,28 @@ class App extends Component {
   }
 
   fetchResults() {
-    fetch(`${url}${apiKey}&query=${value}`)
-      .then(res => res.json())
-      .then(res => {
-        console.log(res)
+        let res = jsonResponse
         this.setState({shodanArray: res.matches})
         console.log(this.state.shodanArray)
         this.setState({shodanArray: res.matches})
         this.createArray();
-      })
   }
+
+  // fetchResults() {
+  //   fetch(`${url}${apiKey}&query=${value}`)
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       console.log(res)
+  //       this.setState({shodanArray: res.matches})
+  //       console.log(this.state.shodanArray)
+  //       this.setState({shodanArray: res.matches})
+  //       this.createArray();
+  //     })
+  // }
 
   createArray() {
     let i = 0;
     for (i=0; i<10; i++) {
-      console.log(this.state.subsetArray)
       this.state.subsetArray.push(this.state.shodanArray[i])
     }
   }
@@ -78,7 +85,8 @@ class App extends Component {
         <Button click={this.fetchResults} />
         <View click={this.previousMap} 
         otherClick={this.nextMap} 
-        subsetKey={this.state.subsetArray}/>
+        subsetKey={this.state.subsetArray}
+        count={this.state.count}/>
       </div>
     );
   }
