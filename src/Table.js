@@ -9,11 +9,14 @@ import React, { Component } from 'react';
 class Table extends Component {
     constructor(props) {
     super(props);
+    this.getHeaders = this.getHeaders.bind(this);
+    this.getRows = this.getRows.bind(this);
+    this.getKeys = this.getKeys.bind(this);
 }
 
 getKeys(){
-    console.log(this.props.subsetTable[0])
-    return Object.keys(this.props.subsetTable[0]);   
+    console.log(this.props.subsetTable)
+    return Object.keys(this.props.subsetTable);   
 }
 
 getHeaders(){
@@ -38,10 +41,10 @@ getRows(){
             <div>
                 <table>
                     <thead>
-                    <tr> { this.getHeaders } </tr>
+                    <tr> { this.getHeaders()} </tr>
                     </thead>
                     <tbody>
-                    <tbody> { this.getRows }</tbody>
+                    <tbody> { this.getRows() }</tbody>
                     </tbody>
                 </table>
             </div>
