@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import { useTable } from 'react-table';
 
 //Columns in React-js
 //https://medium.com/@subalerts/create-dynamic-table-from-json-in-react-js-1a4a7b1146ef
@@ -14,6 +16,13 @@ class Table extends Component {
     this.getRows = this.getRows.bind(this);
     this.getKeys = this.getKeys.bind(this);
 }
+
+// const columns = Object.keys(response.initial_data[0]).map((key, id)=>{
+//     return {
+//       Header: key,
+//       accessor: key
+//     }
+//   })
 
 getKeys(){
     console.log(this.props.subsetTable)
@@ -57,4 +66,7 @@ getRows(){
     //         return <td key={props.subsetTable[key]}>{props.subsetTable[key]}</td>
     // })
 }
+
+
+
 export default Table;
