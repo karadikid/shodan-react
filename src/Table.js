@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 //https://plnkr.co/edit/ysN4Qb3lUp9mbqFhumWJ?p=preview
 //https://stackoverflow.com/questions/38536399/creating-a-dynamic-table-from-json-response-in-reactjs
 //https://jsfiddle.net/combatmonk/7Ldrsg2h/1/
+//https://stackoverflow.com/questions/48748803/dynamic-column-and-values-in-react-table
 
 class Table extends Component {
     constructor(props) {
