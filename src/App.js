@@ -29,7 +29,7 @@ class App extends Component {
         this.setState(this.state.shodanArray = jsonResponse)
         // console.log(res)
         // this.setState({shodanArray : res})
-        console.log(this.state.shodanArray)
+        // console.log(this.state.shodanArray)
         this.createArray()
   }
 

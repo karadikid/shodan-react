@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Map from './Maps';
-import Table from './Table';
+import TableView from './TableView';
 
 class View extends Component {
     constructor(props){
@@ -19,7 +19,7 @@ class View extends Component {
                 <button onClick={this.props.otherClick}>Next</button>
                 </section>
                 <section>
-                <Table subsetTable={this.props.subsetKey}/>
+                <TableView subsetTable={this.props.subsetKey}/>
                 </section>
             </div>
             </>
