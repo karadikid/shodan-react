@@ -1,4 +1,4 @@
-![Virtual Nexus Logo](VN_Logo.png)
+![Virtual Nexus Logo](./VN_Logo.png)
 
 # Purpose
 This website shows how to use Javascript to pull from the Shodan API using fetch.
