@@ -14,6 +14,3 @@ It displays in REACT.
 
 ![shodan-api-js-screenshot](./shodan-react-screenshot.png)
 
-
-
-[Demo Website](https://karadikid.github.io/shodan-api-js/)
